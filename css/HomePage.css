@@ -202,7 +202,14 @@ nav input[type="checkbox"]{
     margin-top: 20px;
   }
 .textBox{
-    margin-top:50px
+    margin-top:50px;
+    margin-bottom: 50px;
+    
+}
+
+.imgDescription{
+    text-align: center;
+    color: white;
 }
 
 /* media screen query */
