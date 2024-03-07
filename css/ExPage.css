@@ -1,0 +1,264 @@
+:root{
+  
+    --navbar-height: 80px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+}
+
+html{
+    height: 100%;
+}
+body{
+   background-image: url(../bilder/mauer.png);
+   background-size: cover;
+
+   
+}
+
+h1{
+    color: rgb(255, 255, 255);
+    font-family: Arial, serif;
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 2px 2px 3px rgb(0, 0, 0);
+ 
+
+}
+
+h2{
+    color: rgb(255, 255, 255);
+    font-family: Arial, serif;
+    font-size: 25px;
+    text-align: center;
+}
+
+nav{
+    height: var(--navbar-height);
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.sugDiv h1{
+    font-family: "Lucida Handwriting", fantasy;
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px whitesmoke;
+   
+}
+
+
+nav ul{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    color: white;
+}
+nav li{
+    height: 100%;
+    width: 150px;
+    text-align: center;
+    position: relative;
+}
+nav li:hover{
+    background: #4f5055;
+}
+nav ul a{
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+.dropdown{
+    height: min-content;
+    width: 150px;
+    background:  #4f5055;
+
+    display: none;
+    flex-direction: column;
+
+    position: absolute;
+    left: 0;
+    top: var(--navbar-height);
+}
+.dropdown li{
+    height: 70px;
+    width: 100%;
+}
+.dropdown li a{
+    justify-content: flex-start;
+    padding-left: 30px;
+    width: calc(100% - 20px);
+}
+nav li:hover .dropdown{
+    display: flex;
+}
+nav input[type="checkbox"]{
+    display: none;
+}
+.items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toggle_button{
+    width: 30px;
+    height: 23px;
+
+    position: absolute;
+    top: 25px;
+    right: 25px;
+
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.bar{
+    height: 4px;
+    width: 100%;
+    background: var(--text-color);
+    border-radius: 100px;
+}
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: space-around;
+    gap: 17em;
+    row-gap: 200px;
+    margin-top: 10em;
+
+}
+.image-button1{
+    border: black;
+    border-width: 1px;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+.image-button2{
+    border: black;
+    border-width: 1px;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+.image-button3{
+    border: black;
+    border-width: 1px;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+.image-button4{
+    border: black;
+    border-width: 1px;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.image-button5{
+    border: black;
+    border-width: 1px;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+
+}
+ 
+th, td {
+    
+    color: white;
+    padding: 15px;
+    text-align: center;
+   
+  }
+
+
+main{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.side{
+    width: 200px;
+    margin-top: 20px;
+}
+.leftImg{
+    width: 300px;
+}
+/* media screen query */
+@media(max-width: 850px){
+    .toggle_button{
+        display: flex;
+    }
+    nav ul{
+        height: min-content;
+        width: 100%;
+        background-color: var(--background-color);
+
+        display: none;
+        position: absolute;
+        top: var(--navbar-height);
+    }
+    nav li{
+        height: min-content;
+        width: 100%;
+    }
+    nav ul a{
+        padding: 30px 0;
+    }
+    .items{
+        display: block;
+    }
+    .items label{
+        padding: 30px 0;
+        cursor: pointer;
+        display: block;
+    }
+    .items:hover .dropdown{
+        display: none;
+    }
+    .items input[type="checkbox"]:checked ~ .dropdown{
+        display: block;
+    }
+    .dropdown{
+        position: static;
+        width: 100%;
+    }
+    .dropdown li{
+        padding: 0;
+        display: block;
+        position: static;
+        background: var(--darker-background-color);
+
+    }
+    .dropdown li a{
+        width: 100%;
+        padding: 0;
+        justify-content: center;
+    }
+    #toggle_button:checked ~ ul{
+        display: block;
+    }
+}
